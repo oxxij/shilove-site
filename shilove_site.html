@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ШіLove — Натуральний крем від розтяжок для мам</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff3f0;
+      margin: 0;
+      padding: 0;
+      color: #4a3c3a;
+    }
+    header {
+      background: #f8e1dd;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #c87f6a;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #a06655;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.2rem;
+    }
+    .ingredients, .about, .shop, .cart {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff9f8;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #f8e1dd;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7a5f59;
+    }
+    .button {
+      background-color: #f4b6ac;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .button:hover {
+      background-color: #e29a91;
+    }
+    input[type="number"] {
+      width: 50px;
+      padding: 5px;
+    }
+  </style>
+  <script>
+    function addToCart() {
+      const quantity = parseInt(document.getElementById('qty').value);
+      const price = 350;
+      const total = quantity * price;
+      document.getElementById('cart-content').innerText = `Ви додали ${quantity} шт. на суму ${total} грн.`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>ШіLove</h1>
+    <nav>
+      <a href="#about">Про крем</a>
+      <a href="#ingredients">Склад</a>
+      <a href="#shop">Купити</a>
+      <a href="#cart">Кошик</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Ніжність для мами. Захист для шкіри.</h2>
+    <p>ШіLove — натуральний крем, створений майбутньою мамою для таких же, як ти. Допомагає запобігти появі розтяжок під час вагітності, зволожує, живить і робить шкіру еластичною.</p>
+  </section>
+
+  <section id="ingredients" class="ingredients">
+    <h2>Склад</h2>
+    <ul>
+      <li>Масло ші</li>
+      <li>Олія жожоба</li>
+      <li>Масло какао</li>
+      <li>Вітамін E</li>
+    </ul>
+    <p>100% натуральний склад. Без парабенів, сульфатів чи синтетичних ароматизаторів.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Чому ШіLove?</h2>
+    <p>Я створила цей крем, коли була вагітна, шукаючи щось натуральне, безпечне і дійсно ефективне. Він допоміг мені зберегти м’якість і пружність шкіри — тепер я хочу поділитися ним з тобою!</p>
+  </section>
+
+  <section id="shop" class="shop">
+    <h2>Купити</h2>
+    <p>Ціна: <strong>350 грн</strong></p>
+    <label for="qty">Кількість:</label>
+    <input type="number" id="qty" value="1" min="1" />
+    <button class="button" onclick="addToCart()">Додати в кошик</button>
+  </section>
+
+  <section id="cart" class="cart">
+    <h2>Ваш кошик</h2>
+    <p id="cart-content">Кошик порожній.</p>
+    <p>Для замовлення напишіть нам у <a href="https://instagram.com/shi.love.shop" target="_blank">Instagram</a> або на email: <a href="mailto:order@shilove.com">order@shilove.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 ШіLove. Зроблено з любов’ю 💛</p>
+  </footer>
+</body>
+</html>
